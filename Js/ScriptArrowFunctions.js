@@ -1,65 +1,65 @@
-// As funções em javascript são de primeira classe.
+// // As funções em javascript são de primeira classe.
 
-// // Funções anônimas 
+// // // Funções anônimas 
 
-// Arrow Functions 
+// // Arrow Functions 
 
-// var sum = (a, b) => a + b
+// // var sum = (a, b) => a + b
 
-// var sum = (a, b) => {
-//     return a + b;
-// }
+// // var sum = (a, b) => {
+// //     return a + b;
+// // }
 
-// //Pode ocultar os parentêses quando houver apenas um argumento
-// var sum = a => a;;
+// // //Pode ocultar os parentêses quando houver apenas um argumento
+// // var sum = a => a;;
 
-// console.log(sum(5, 15));
+// // console.log(sum(5, 15));
 
-// //Retornar objetos literais com retornos implicitos
+// // //Retornar objetos literais com retornos implicitos
 
-// var createObj = () => ({ test: 123 });
+// // var createObj = () => ({ test: 123 });
 
-// console.log(createObj);
+// // console.log(createObj);
 
-//Contexto de invocação
+// //Contexto de invocação
 
-var obj = {
-    showContext: function showContext() {
-        this.log('teste');
-        //Poderia chamar:
-        // this.log('test');
+// var obj = {
+//     showContext: function showContext() {
+//         this.log('teste');
+//         //Poderia chamar:
+//         // this.log('test');
 
-        /* funções de eventlistener são executadas no contexto global
-        o código abaixo não vai funcionar
-        */
-        setTimeout(function() {
-            this.log('after 1000ms')
-        }, 1000);
+//         /* funções de eventlistener são executadas no contexto global
+//         o código abaixo não vai funcionar
+//         */
+//         setTimeout(function() {
+//             this.log('after 1000ms')
+//         }, 1000);
 
-        /* Uma forma de correção antiga era fixar o contexto,
-        ou colocar uma variável que recebesse o contexto atual.
-        */
+//         /* Uma forma de correção antiga era fixar o contexto,
+//         ou colocar uma variável que recebesse o contexto atual.
+//         */
 
-        //Com o Bind
-        // setTimeout(function() {
-        //     console.log('after 1000ms')
-        // }.bind(this), 1000);
+//         //Com o Bind
+//         // setTimeout(function() {
+//         //     console.log('after 1000ms')
+//         // }.bind(this), 1000);
 
-        // // Com a variável
-        // var _that = this;
-        // setTimeout(function() {
-        //     _that.log('after 1000ms')
-        // }, 1000);
+//         // // Com a variável
+//         // var _that = this;
+//         // setTimeout(function() {
+//         //     _that.log('after 1000ms')
+//         // }, 1000);
 
-        // //Solução como arrowFunction
+//         // //Solução como arrowFunction
 
-        setTimeout(() => {
-            this.log('after 1000ms')
-        }, 1000);
+//         setTimeout(() => {
+//             this.log('after 1000ms')
+//         }, 1000);
 
-    },
-    log: function log(value) {
-        console.log(value);
-    }
-};
-obj.showContext();
+//     },
+//     log: function log(value) {
+//         console.log(value);
+//     }
+// };
+// obj.showContext();

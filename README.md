@@ -1,3 +1,4 @@
 ### Funções avançadas do ES6
 
-+  Arrow Functions aplicado no contexto de invocação
++  Arrow Functions aplicado no contexto de invocação.
++  Adicionando valores padrões na assinatura das funções.
