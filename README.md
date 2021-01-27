@@ -5,3 +5,4 @@
 +  Declarações de objetos literais.
 +  Exemplos com os operadorees Rest e Spread.
 +  Exemplos de destructuring assignment. 
++  Exemplo de Symbol Iterator.
